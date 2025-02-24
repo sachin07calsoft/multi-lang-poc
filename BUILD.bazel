@@ -1,0 +1,8 @@
+java_test(
+    name = "CalculatorTest",
+    srcs = ["src/com/example/CalculatorTest.java"],
+    deps = [
+        "//:calculator",  # A library for the Calculator class (if needed)
+        "@maven//:junit",  # JUnit dependency
+    ],
+)
