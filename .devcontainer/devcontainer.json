@@ -1,15 +1,15 @@
 {
-    "name": "Bazel Development Environment",
-    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",  // You can use any base image
-    "postCreateCommand": "bash ./install_bazel.sh",  // Run a shell script to install Bazel after the container is created
-    "customizations": {
-      "vscode": {
-        "extensions": [
-          "bazelbuild.vscode-bazel"
-        ]
-      }
-    },
-    "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash"
+  "name": "Multi-lang POC Environment",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",  // Base Ubuntu image
+  "postCreateCommand": "bash .devcontainer/install_bazel.sh",  // Script to install Bazel
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bazelbuild.vscode-bazel"
+      ]
     }
-  }  
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  }
+}
