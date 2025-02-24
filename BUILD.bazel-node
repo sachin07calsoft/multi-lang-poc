@@ -1,0 +1,10 @@
+load("@npm//:jest.bzl", "jest_test")
+
+jest_test(
+    name = "calculator_test",
+    srcs = ["calculator.test.js"],
+    deps = [
+        "//:calculator",  # Assuming calculator.js is in the same directory
+        "@npm//jest",  # Jest dependency
+    ],
+)
