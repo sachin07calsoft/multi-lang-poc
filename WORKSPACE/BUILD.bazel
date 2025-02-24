@@ -4,12 +4,16 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "rules_java",
     urls = ["https://github.com/bazelbuild/rules_java/releases/download/v5.0.0/rules_java-v5.0.0.tar.gz"],
-    sha256 = "some-sha256-here",
+    sha256 = "9b44ec8b9a0b3cd99b019d4a85a6c8c871299ff98bb3d6fba50d0e72613b6a0b",
 )
+load("@rules_java//java:maven_rules.bzl", "maven_install")
 
 # For Node.js dependencies (Jest, nyc, etc.)
 http_archive(
     name = "rules_nodejs",
     urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/v3.1.0/rules_nodejs-v3.1.0.tar.gz"],
-    sha256 = "some-sha256-here",
+    sha256 = "cd8b46b71d5a665022d5f035a42c073fb1a858ff9c3eb05fd94f4a6d4e7c9d42",
 )
+load("@rules_nodejs//nodejs:defs.bzl", "node_repositories")
+
+node_repositories()
